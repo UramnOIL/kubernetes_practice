@@ -15,11 +15,19 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: rust-practice
+        image: 926972041025.dkr.ecr.ap-northeast-1.amazonaws.com/rust-practice:0c7f325
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
         resources:
           requests:
-            cpu: 100m
-            memory: 100Mi
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 80
