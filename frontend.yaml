@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rust-practice
-        image: 926972041025.dkr.ecr.ap-northeast-1.amazonaws.com/rust-practice:fe9ee22163261f1e0300778c4cbcb6ede78817a3
+        image: 926972041025.dkr.ecr.ap-northeast-1.amazonaws.com/rust-practice:0469da3e3022f0e8deb76d4f8bfe88daa5d409fd
         env:
         - name: POD_NAME
           valueFrom:
