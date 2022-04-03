@@ -10,7 +10,6 @@
 	},
 
 	"mounts": [
-		"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind",
 		"source=${env:HOME}${env:USERPROFILE}/.kube,target=/usr/local/share/kube-localhost,type=bind",
 		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind",
 		"source=${localEnv:HOME}/.kube,target=/home/vscode/.kube,type=bind",
@@ -43,8 +42,6 @@
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {
-		"docker-in-docker": "latest",
-		"kubectl-helm-minikube": "latest",
 		"git": "latest",
 		"aws-cli": "latest"
 	}
